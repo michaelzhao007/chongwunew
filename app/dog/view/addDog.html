@@ -1,0 +1,24 @@
+ <div class="modal-header">
+ 	{{msg.success}}
+            <h3 class="modal-title">Tell us about your dog!</h3>
+        </div>
+ <form>
+ <div class="form-group">
+    <div class="modal-body">
+  
+       <input type="text" ng-model="dog.dogName" placeholder="Tell us your dog's name!"/>
+       </br>
+       <input type="text" ng-model="dog.dogAge" placeholder="Tell us yoru dog's age"/>
+      </br>
+      <select ng-model="dog.dogSex" ng-options="identity for identity in identities"></select>
+      <br/>
+       <input type="file" ng-file-select ng-model="files"/>
+      <textarea ng-model="dog.description" class="form-control" placeholader="tell us your dog's life and your contact email or phone!"></textarea>
+      <br/>
+     </div>
+     <div class="modal-footer">
+        <input type="submit" class="btn btn-primary" ng-click="addDog(dog)" value="add your dog"/>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+     </div>
+ </div>
+</form>

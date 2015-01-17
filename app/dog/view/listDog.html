@@ -1,0 +1,39 @@
+<login-bar></login-bar>
+
+
+<div ng-controller="dogController">
+<div class="row">
+  <div class="col-md-4 col-md-offset-8"> <a href ng-click="createDogModal()"><h5>Do you have dog need to be adopted?</h5></a>
+  </div>
+</div>
+<br/>
+<br/>
+<div class="container marketing">
+    <div ng-show="message">{{message}}</div>
+    <table class="table">
+    <thead>
+      <tr>
+         <th>Look</th>
+         <th>Name</th>
+         <th>Age</th>
+         <th>Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="dog in dogList">
+        <th><img ng-src="{{dog.dogImageUrl}}" height="32" width="32"></th>
+        <th>{{dog.dogName}}</th>
+        <th>{{dog.dogAge}}</th>
+        <th>{{dog.description}}</th>
+      </tr>
+    
+  </tbody>
+  </table>
+
+</div>
+
+</br>
+</br>
+
+
+</div>

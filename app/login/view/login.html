@@ -1,0 +1,57 @@
+<div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Find your dog family here</a>
+        </div>
+        <div ng-hide="signinFlag">
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form" ng-submit="loginUser(user)">
+                <div class="form-group">
+                    <input type="text" placeholder="Username" class="form-control"  ng-model="user.userName">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="Password" class="form-control"  ng-model="user.passWord">
+                </div>
+                <button type="submit" class="btn btn-success">Sign in</button>
+            </form>
+        </div><!--/.navbar-collapse -->
+        </div>
+        <div ng-show="signinFlag">
+            <button class="btn btn-success navbar-right" ng-click="logout()">Logout</button>
+        </div>
+    </div>
+ </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="alert aler-[{alert.type}] animated main-alert pull-right" ng-class="{'flipInY':alert.show,'flipOutY':!alert.show, 'alert-hidden':!alert.hasBeenShown}"><strong>{{alert.title}}</strong>{{alert.message}}</div>
+
+</div>
+<br>
+ <br>
+        <br>
+<!--
+<div class="container">
+<div ng-controller="dogController">
+    <div clas="row">
+    <ul class="liststrap">
+      <li>
+         <div  ng-repeat="dog in dogList">
+             <span><img ng-src="{{dog.dogImageUrl}}" height="122" width="122" class="img-circle"></span>
+             <span>{{dog.dogName}}</span>
+            <span>{{dog.dogAge}}</span>
+           </div>
+       </li>
+     </ul>
+  </table>
+        </div>
+</div>
+</div>-->

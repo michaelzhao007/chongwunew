@@ -1,0 +1,102 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.bgWrapper {
+    background-image: url(img/wallbg.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-color: #eeeeee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.formWrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 1px #000;
+}
+
+
+.listrap {
+    list-style-type: none;
+    margin-top: 100px;
+    padding: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.listrap li {
+    margin: 0;
+    padding: 10px;
+}
+
+.listrap li.active, .listrap li:hover {
+    background-color: #d9edf7;
+}
+
+.listrap strong {
+    margin-left: 10px;
+}
+
+.listrap .listrap-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.listrap .listrap-toggle span {
+    background-color: #428bca;
+    opacity: 0.8;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.listrap .listrap-toggle span:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+}
+
+.listrap li.active .listrap-toggle span {
+    display: block;
+}
