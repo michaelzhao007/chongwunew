@@ -4,7 +4,7 @@
 3 info using node@v0.10.35
 4 verbose node symlink /usr/bin/node
 5 verbose cache add [ 'forever', null ]
-6 verbose cache add name=undefined spec="forever" args=["forever",null]
+6 verbose cache add name=undefined  spec="forever" args=["forever",null]
 7 verbose parsed url { protocol: null,
 7 verbose parsed url   slashes: null,
 7 verbose parsed url   auth: null,
